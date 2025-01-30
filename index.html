@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Materials</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">el-logo beta3na</div>
+            <!-- Hamburger Icon -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>Study Materials</h1>
+            <div class="header-actions">
+                <input type="text" id="searchBar" placeholder="Search by title, description, or link...">
+                <button id="publishBtn">Publish</button>
+                <button id="showMaterials">📚 Materials</button>
+                <button id="showFavorites">⭐ Favorites</button>
+                <button id="showRecycleBin">🗑️ Recycle Bin</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Filters -->
+        <div class="filters">
+            <select id="gradeFilter">
+                <option value="">All Grades</option>
+                <option value="Grade 10">Grade 10</option>
+                <option value="Grade 11">Grade 11</option>
+                <option value="Grade 12">Grade 12</option>
+            </select>
+            <select id="semesterFilter">
+                <option value="">All Semesters</option>
+                <option value="Semester 1">Semester 1</option>
+                <option value="Semester 2">Semester 2</option>
+            </select>
+            <select id="subjectFilter">
+                <option value="">All Subjects</option>
+                <option value="Math">Math</option>
+                <option value="Physics">Physics</option>
+                <option value="Biology">Biology</option>
+            </select>
+        </div>
+
+        <!-- Materials Section -->
+        <div id="materialsContainer"></div>
+
+        <!-- Favorites Section -->
+        <div id="favoritesContainer" style="display: none;"></div>
+
+        <!-- Recycle Bin Section -->
+        <div id="recycleBinContainer" style="display: none;">
+            <h2>Recycle Bin</h2>
+            <button id="clearRecycleBin">Empty Bin</button>
+            <div id="recycleBinItems"></div>
+        </div>
+    </main>
+
+    <!-- Publish Modal -->
+    <div id="publishModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>New Material</h2>
+            <input type="text" id="titleInput" placeholder="Title">
+            <textarea id="descriptionInput" placeholder="Description"></textarea>
+            <input type="text" id="linkInput" placeholder="Material Link">
+            <select id="gradeInput">
+                <option value="Grade 10">Grade 10</option>
+                <option value="Grade 11">Grade 11</option>
+                <option value="Grade 12">Grade 12</option>
+            </select>
+            <select id="semesterInput">
+                <option value="Semester 1">Semester 1</option>
+                <option value="Semester 2">Semester 2</option>
+            </select>
+            <select id="subjectInput">
+                <option value="Math">Math</option>
+                <option value="Physics">Physics</option>
+                <option value="Biology">Biology</option>
+            </select>
+            <button id="submitPost">Post</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
