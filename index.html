@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Materials</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">el-logo beta3na</div>
+            <!-- Hamburger Icon -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>Studying Materials (Secondary Stage)</h1>
+            <div class="header-actions">
+                <input type="text" id="searchBar" placeholder="Search by title, description, or link...">
+                <button id="showMaterials">📚 Materials</button>
+                <button id="showFavorites">⭐ Favorites</button>
+                <button id="showRecycleBin">🗑️ Recycle Bin</button>
+                <button id="publishBtn">Publish</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Filters -->
+        <div class="filters">
+            <select id="gradeFilter">
+                <option value="All Grades">All Grades</option>
+                <option value="Grade 10">Grade 10</option>
+                <option value="Grade 11">Grade 11</option>
+                <option value="Grade 12">Grade 12</option>
+            </select>
+            <select id="semesterFilter">
+                <option value="All Semesters">All Semesters</option>
+                <option value="Semester 1">Semester 1</option>
+                <option value="Semester 2">Semester 2</option>
+            </select>
+            <select id="subjectFilter">
+                <option value="All Subjects">All Subjects</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Mechanics">Mechanics</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Biology">Biology</option>
+                <option value="Geology">Geology</option>
+                <option value="English">English</option>
+                <option value="French">French</option>
+                <option value="Deutsch">Deutsch</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Arabic">Arabic</option>
+                <option value="Social Studies">Social Studies</option>
+                <option value="Religion">Religion</option>
+            </select>
+            <select id="schoolFilter">
+                <option value="All Schools">All Schools</option>
+                <option value="STEM Schools">STEM Schools</option>
+                <option value="General Schools">General Schools</option>
+            </select>
+        </div>
+        <!-- Materials Section -->
+        <div id="materialsContainer"></div>
+
+        <!-- Favorites Section -->
+        <div id="favoritesContainer" style="display: none;"></div>
+
+        <!-- Recycle Bin Section -->
+        <div id="recycleBinContainer" style="display: none;">
+            <h2>Recycle Bin</h2>
+            <button id="clearRecycleBin">Empty Bin</button>
+            <div id="recycleBinItems"></div>
+        </div>
+    </main>
+
+    <!-- Publish Modal -->
+    <div id="publishModal" class="modal">
+        <form class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>New Material</h2>
+            <input type="text" id="titleInput" placeholder="Title">
+            <textarea id="descriptionInput" placeholder="Description"></textarea>
+            <input type="text" id="linkInput" placeholder="Material Link">
+            <select id="gradeInput">
+                <option value="All Grades">All Grades</option>
+                <option value="Grade 10">Grade 10</option>
+                <option value="Grade 11">Grade 11</option>
+                <option value="Grade 12">Grade 12</option>
+            </select>
+            <select id="semesterInput">
+                <option value="All Semesters">All Semesters</option>
+                <option value="Semester 1">Semester 1</option>
+                <option value="Semester 2">Semester 2</option>
+            </select>
+            <select id="subjectInput">
+                <option value="All Subjects">All Subjects</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Mechanics">Mechanics</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Biology">Biology</option>
+                <option value="Geology">Geology</option>
+                <option value="English">English</option>
+                <option value="French">French</option>
+                <option value="Deutsch">Deutsch</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Arabic">Arabic</option>
+                <option value="Social Studies">Social Studies</option>
+                <option value="Religion">Religion</option>
+            </select>
+            <select id="schoolInput">
+                <option value="All Schools">All Schools</option>
+                <option value="STEM Schools">STEM Schools</option>
+                <option value="General Schools">General Schools</option>
+            </select>
+            <button id="submitPost">Post</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
